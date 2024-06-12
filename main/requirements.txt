@@ -12,9 +12,6 @@ itsdangerous==2.2.0
 jdk4py==17.0.9.2
 Jinja2==3.1.4
 MarkupSafe==2.1.5
-mysqlclient==2.2.4
-numpy==1.26.4
-pandas==2.2.2
 py4j==0.10.9.7
 pyarrow==16.1.0
 pydantic==2.7.3
@@ -22,7 +19,6 @@ pydantic_core==2.18.4
 python-dateutil==2.9.0.post0
 pytz==2024.1
 six==1.16.0
-SQLAlchemy==2.0.30
 typing_extensions==4.12.2
 tzdata==2024.1
 visitor==0.1.3
