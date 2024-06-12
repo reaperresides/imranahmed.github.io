@@ -2,22 +2,22 @@
   "version": 2,
   "builds": [
     {
-      "src": "app.py",
+      "src": "main/app.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/home",
-      "dest": "/app.py"
+      "dest": "main/app.py"
     },
     {
       "src": "/portfolio",
-      "dest": "/app.py"
+      "dest": "main/app.py"
     },
     {
       "src": "/download",
-      "dest": "/app.py"
+      "dest": "main/app.py"
     }
   ]
 }
