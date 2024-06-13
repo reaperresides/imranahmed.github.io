@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imran Ahmed</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='images/logo.png') }}"
+        style="border-radius: 15px;">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .navbar-toggler {
+            border-color: #333;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M24 20.993V24H0V19.993L12.007 9.993L24 1.993L24 20.993Z'/%3E%3C/svg%3E");
+            background-size: 24px 24px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+            padding: 0.5rem;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #000;
+            /* Change color to black on hover */
+        }
+
+        .navbar-nav .nav-link.active {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .rounded {
+            border-radius: 50%;
+        }
+
+        .vertical-center {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(50%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(-50%);
+                opacity: 1;
+            }
+        }
+
+        .button {
+            background-color: #008000;
+            /* Green */
+            border: 2px solid #008000;
+            /* Green border */
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            margin: 0 auto;
+            /* Center the button */
+            display: block;
+            /* Make the button a block element */
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 8px;
+        }
+
+        .footer {
+            background-color: #333;
+            padding: 1rem;
+            color: #fff;
+            text-align: center;
+            margin-top: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer hr {
+            border-color: #666;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .background-image {
+            background-size: cover;
+            background-position: center;
+            height: calc(644px - 3.5rem - 3rem);
+            /* Height of viewport - navbar height - footer height */
+            margin-top: -3rem;
+            /* Height of the space occupied by navbar */
+        }
+
+        .vertical-center {
+            color: rgb(0, 0, 0)
+        }
+
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+
+        .footer-icons i {
+            margin: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo"
+                    class="d-inline-block align-top" / style="width: 55px;
+                height: 40px;
+                border-radius: 5px;">
+                Imran Ishtiyak Ahmed
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/in/mohd-imran-shaikh-b860041bb"
+                            target="_blank" title="linkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:imranishtiyakahmed@gmail.com" target="_blank" title="mail">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/reaperresides" target="_blank" title="github">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link download-button" href="/download" download title="Download CV">
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div style="margin-top: 13rem;height: 1px;">
+        <table id="rounded-table" style="width: 96%; font-weight: 500;">
+            <style>
+                #rounded-table {
+                border-collapse: collapse;
+                border-radius: 20px; /* Increase the border radius for a rounder border */
+                box-shadow: 0 0 10px 5px  rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+                margin: 0 auto; /* Center the table horizontally */
+                position: relative; /* Make the table relative for vertical centering */
+                top: 50%; /* Move the table up by half its height */
+                transform: translateY(-50%); /* Move the table up by half its height */
+                width: 80%; /* Adjust the width as needed */
+                }
+
+                #rounded-table th, #rounded-table td {
+                border: none; /* Remove the border lines */
+                padding: 10px;
+                }
+
+                #rounded-table th {
+                background-color: #f0f0f0;
+                }
+            </style>
+            <tr>
+                <th>Company</th>
+                <th>Project Name</th>
+                <th>Techniques used</th>
+                <th>Areas Worked on</th>
+              </tr>
+            <tr>
+              <td>Findability Sciences pvt. ltd.</td>
+              <td style="color:#000000ad">Real Time Bidding</td>
+              <td style="color:#000000ad">Classification, Regression</td>
+              <td style="color:#000000ad">Modelling, Analysis, API Deployment, Database Management</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td style="color:#000000ad">Customer Recomendation</td>
+              <td style="color:#000000ad">Propensity model</td>
+              <td style="color:#000000ad">Modelling, Analysis, Model Deployment, Database Management</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td style="color:#000000ad">Inventory Forecasting</td>
+              <td style="color:#000000ad">Time Series Forecasting</td>
+              <td style="color:#000000ad">Modelling & Analysis, Database Management</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="color:#000000ad">OCR PDF data Extraction</td>
+                <td style="color:#000000ad">NLP Transfer Learning, Google Azure API</td>
+                <td style="color:#000000ad">Modelling</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Supreme Group pvt. ltd.</td>
+                <td style="color:#000000ad">Inventory Foreacsting</td>
+                <td style="color:#000000ad">Time Series Foreacsting</td>
+                <td style="color:#000000ad">Modelling & Analysis</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td style="color:#000000ad">Manufacturing Data Analysis</td>
+                <td style="color:#000000ad">Analysis</td>
+                <td style="color:#000000ad">Daily data analysis</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Verzeo Infotech</td>
+                <td style="color:#000000ad">Object Detection</td>
+                <td style="color:#000000ad">Transfer Learning YOLO v4</td>
+                <td style="color:#000000ad">Modelling, data augmentation, data annotation</td>
+                
+              </tr>
+          </table> 
+          <center style="margin-top: -171px;">
+            <a style="margin-right: 20px;" href="/portfolio" class="btn btn-success">View Portfolio</a> <a href="/download" class="btn btn-danger">Download CV</a>
+                
+          </center>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-center">Copyright &copy; 2024 Imran Ishtiyak Ahmed. All rights reserved.</p>
+
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
