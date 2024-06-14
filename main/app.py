@@ -11,7 +11,7 @@ def home():
 
 @app.route('/download')
 def download_file():
-    file_path = 'static/files/Resume.pdf'
+    file_path = 'static/files/Imran_Ahmed_3yrs_Resume.pdf'
     return send_file(file_path, as_attachment=True)
 
 @app.route('/portfolio')
