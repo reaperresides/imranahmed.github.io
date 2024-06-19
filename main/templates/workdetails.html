@@ -172,16 +172,21 @@
                             <i class="fab fa-instagram"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" >
                         <a class="nav-link download-button" href="/download" download title="Download CV">
                             <i class="fas fa-download"></i>
                         </a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="tel:+919619722992" title="Call me">
+                        <a class="nav-link" onclick="showAlert()" title="Call me">
                             <i class="fas fa-phone"></i>
                         </a>
+                        <script>
+                            function showAlert() {
+                                alert("+91 9619722992");
+                            }
+                        </script>
                     </li>
                 </ul>
             </div>
